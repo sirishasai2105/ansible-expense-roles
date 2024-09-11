@@ -18,6 +18,8 @@
   ansible.builtin.user:
     name: expense
     state: present
+  tags:
+  - deployment
 
 # - name: importing ansible roles
 #   ansible.builtin.import_roles:
@@ -46,6 +48,8 @@
       - PyMySQL
       - cryptography
     executable: pip3.9
+  tags:
+    -deployment
 
 - name: connecting to mysql
   community.mysql.mysql_db:
