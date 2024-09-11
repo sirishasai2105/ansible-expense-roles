@@ -1,4 +1,3 @@
-tasks:
     - name: installing mysql-server
       ansible.builtin.package:
         name: mysql-server
@@ -25,3 +24,4 @@ tasks:
     - name: setting up root password
       ansible.builtin.command: "mysql_secure_installation --set-root-pass {{ login_password }}"
       when: mysql_info.failed is true
+
