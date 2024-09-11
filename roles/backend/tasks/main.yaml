@@ -19,11 +19,15 @@
     name: expense
     state: present
 
-- name: importing ansible roles
-  ansible.builtin.import_roles:
-    name: common
-    tasks_from: app_pre_req
+# - name: importing ansible roles
+#   ansible.builtin.import_roles:
+#     name: common
+#     tasks_from: app_pre_req
 
+- name: import tasks from common role
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-pre-req
 
 - name: installing the dependancies
   ansible.builtin.command: npm install
