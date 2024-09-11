@@ -8,8 +8,6 @@
       name: nginx
       state: started
       enabled: yes
-    become: true
-    become_method: sudo
 
   - name: remove the default content
     ansible.builtin.file:
