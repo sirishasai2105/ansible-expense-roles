@@ -1,3 +1,4 @@
 login_host: "mysql.reyanshsai.online"
 login_password: "ExpenseApp@1"
 app_location: /app
+component: backend
